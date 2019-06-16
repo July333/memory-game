@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+  background: rgb(44, 155, 99);
+  
+  text-align: center;
+}
+
+.grid {
+  width: 440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 100px;
+  width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: rgb(201, 236, 71) url('../img/question.gif') no-repeat center center / contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: rgb(44, 155, 99);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match {
+    transform: rotateY(180deg);
+}
+
+button {
+    background-color: rgb(15, 31, 16); /* Green */
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+  #time{
+    text-align: center; 
+    font-size: 14px;
+    height: 70px;
+    width: 150px;
+    position: fixed; 
+    float: right;
+    border: 1px solid black;
+    top: 40px;
+    right: 10%;
+    background-color: rgb(186, 229, 189);
+    padding-top:20px;
+    font-size: 25px;
+  }
+  #f{
+    position: fixed; 
+    float: right;
+    top: 110px;
+    right: 10%;
+
+  }
+  /*#btn{
+    position: fixed; 
+    float: right;
+    top: 250px;
+    right: 10%;
+  }
+  #radio{
+    position: fixed; 
+    float: right;
+    top: 110px;
+    right: 10%;
+  }*/
