@@ -245,8 +245,6 @@ function mone() {
 }
 function WinGame() {
     let temp = grid.childElementCount;
-   // console.log("temp");
-   // console.log(temp);
     if (countmatch == temp) {
         console.log("You win!");
         alert("You win!");
